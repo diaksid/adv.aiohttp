@@ -1,0 +1,92 @@
+a.active,
+.active > a {
+  cursor: default;
+}
+
+.js {
+  .onclick {
+    cursor: pointer;
+  }
+}
+
+.modal {
+  display: none;
+  padding: ($spacer-y * 2) ($spacer-x * 2);
+  background: $body_bg;
+  @include border-radius($border-radius-lg);
+}
+
+.shadow {
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, .7);
+
+  a > &,
+  .js &.onclick,
+  .js &[data-lightbox] {
+    transition: box-shadow .2s;
+    &:hover {
+      box-shadow: 3px 3px 12px rgba(0, 0, 0, .9);
+    }
+  }
+}
+
+.screen {
+  padding: $navbar-height 0;
+}
+
+.divided {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: url(#{$img-path}/system/separator.horizontal.gif) bottom repeat-x transparent;
+  }
+}
+
+hr.divider {
+  height: 2px;
+  background: url(#{$img-path}/system/separator.4x2.gif) bottom repeat-x transparent;
+  border: none;
+}
+
+.player {
+  &::before {
+    content: "\e01b";
+    position: relative;
+    top: 1px;
+    padding-right: ($spacer / 2);
+    font-family: 'ppd';
+  }
+
+  &.small {
+    &::before {
+      top: 2px;
+    }
+  }
+}
+
+.preloader {
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -9999;
+    left: 50%;
+    top: 50%;
+    width: 64px;
+    height: 64px;
+    margin-left: -32px;
+    margin-top: -32px;
+    background: url("#{$img-path}/loader/sector.128x128.gif") center no-repeat transparent;
+    background-size: cover;
+  }
+
+  &.error {
+    &::after {
+      background-image: url("#{$img-path}/system/error.png");
+    }
+  }
+}

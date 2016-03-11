@@ -1,0 +1,59 @@
+@mixin sides($offset, $xl, $lg, $md) {
+  .side-left {
+    clear: left;
+    float: left;
+  }
+  .side-right {
+    clear: right;
+    float: right;
+  }
+  .side-prime,
+  .side-add {
+    position: relative;
+    display: block;
+  }
+
+  @include sides_set($offset, $xl);
+
+  @if $lg {
+    @include media-breakpoint-down(lg) {
+      @include sides_set($offset, $lg);
+    }
+    @if $md {
+      @include media-breakpoint-down(md) {
+        @include sides_set($offset, $md);
+      }
+      @include media-breakpoint-down(sm) {
+        @include sides_reset();
+      }
+    } @else {
+      @include media-breakpoint-down(md) {
+        @include sides_reset();
+      }
+    }
+  } @else {
+    @include media-breakpoint-down(lg) {
+      @include sides_reset();
+    }
+  }
+}
+
+@mixin sides_set($offset, $size) {
+  .side-prime {
+    width: $size;
+  }
+  .side-add {
+    width: (100% - $offset - $size);
+  }
+}
+
+@mixin sides_reset() {
+  .side-left,
+  .side-right {
+    float: none;
+  }
+  .side-prime,
+  .side-add {
+    width: auto;
+  }
+}

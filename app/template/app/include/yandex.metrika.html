@@ -1,0 +1,27 @@
+{% if yandex.metrika %}
+    <script type="text/javascript">
+        (function (w, c, j) {
+            (w[c] = w[c] || []).push(function () {
+                try {
+                    w.yaCounter{{ yandex.metrika }} = new Ya.Metrika({
+                        id: {{ yandex.metrika }},
+                        clickmap: true,
+                        trackLinks: true,
+                        accurateTrackBounce: true,
+                        webvisor: true,
+                        trackHash: true
+                    });
+                } catch (e) {
+                }
+            });
+            j.script('//mc.yandex.ru/metrika/watch.js');
+        })(window, 'yandex_metrika_callbacks', jPro);
+    </script>
+
+    <noscript>
+        <img class="hide"
+             src="https://mc.yandex.ru/watch/{{ yandex.metrika }}"
+             alt=""
+        >
+    </noscript>
+{% endif %}

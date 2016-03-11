@@ -1,0 +1,57 @@
+#footer {
+  clear: both;
+  padding: ($spacer * 2) 0 0;
+  color: #aaa;
+
+  .container {
+    position: relative;
+    z-index: 1;
+    background: $body-bg;
+    &::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: url(#{$img-path}/system/separator.horizontal.gif) repeat-x transparent;
+    }
+  }
+
+  .copyright {
+    padding: .5rem 0;
+    font-size: .75rem;
+    address {
+      padding: .5rem 0;
+    }
+  }
+
+  .counters {
+    padding: .25rem 0 .5rem 1rem;
+    float: right;
+    line-height: 1.25rem;
+    .icon {
+      vertical-align: middle;
+      margin-left: 1rem;
+      font-size: 1.125rem;
+    }
+    .onclick {
+      display: none;
+      @at-root .js & {
+        display: inline-block;
+        &:hover,
+        &:focus {
+          color: $link-hover-color;
+        }
+      }
+    }
+    .engine {
+      color: #055;
+      font-size: .8125rem;
+      font-weight: 600;
+      opacity: .5;
+      &:hover,
+      &:focus {
+        opacity: 1;
+      }
+    }
+  }
+}

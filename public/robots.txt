@@ -1,0 +1,7 @@
+#
+Sitemap: http://xn----itbifgddmdchbpkdqdi9nsal.xn--80adxhks/sitemap.xml
+
+User-agent: *
+Disallow: */cache
+Host: xn----itbifgddmdchbpkdqdi9nsal.xn--80adxhks
+#

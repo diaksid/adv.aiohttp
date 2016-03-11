@@ -1,0 +1,81 @@
+/**/
+
+body {
+    color: #333;
+    font-size: 16px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    text-align: center;
+    background: url('../img/bg/pattern.jpg') transparent;
+}
+
+#wrapper {
+    display: inline-block;
+    margin-top: 10%;
+    text-align: center;
+}
+
+.content {
+    margin-bottom: 40px;
+}
+
+h1, h2 {
+    display: inline;
+    font-size: 56px;
+    letter-spacing: -3px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 1);
+}
+h1 {
+    margin: 0 20px 30px 0;
+    font-weight: 700;
+    white-space: nowrap;
+}
+h2 {
+    margin-bottom: 20px;
+    color: rgba(0, 0, 0, .25);
+}
+
+a {
+    margin-right: 40px;
+    padding: 10px 20px;
+    color: #777;
+    line-height: 50px;
+    outline: none;
+    text-decoration: none;
+    white-space: nowrap;
+    border: 1px solid #777;
+    border-radius: 5px;
+}
+a:last-child {
+    margin-right: 0;
+}
+a:hover {
+    color: #555;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 1);
+    background: rgba(119, 119, 119, .1);
+    border-color: #555;
+}
+
+
+@media (max-width: 767px) {
+    h1, h2 {
+        font-size: 22px;
+        letter-spacing: -1px;
+    }
+
+    h2 {
+        color: rgba(0, 0, 0, .4);
+    }
+}
+
+
+@media (max-width: 479px) {
+    h1, h2 {
+        font-size: 20px;
+        letter-spacing: 0;
+    }
+
+    a {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,140 @@
+{% extends 'app/layout/entity.html' %}
+
+
+{% block content %}
+    <section id="services"
+             class="screen divided"
+    >
+        <div class="container">
+            <p itemprop="headline">
+                Для объектов капитального строительства, независимо от источников их финансирования, порядок проведения
+                <strong>строительного контроля</strong> при осуществлении строительства, реконструкции и капитального
+                ремонта устанавливается «Положением о проведении <em>строительного контроля</em> при осуществлении
+                строительства, реконструкции и капитального ремонта объектов капитального строительства» утверждённым
+                <a rel="nofollow"
+                   href="//www.rg.ru/2010/07/27/kontrol-dok.html"
+                   target="_blank"
+                >Постановление Правительства Российской Федерации от 21&nbsp;июня 2010&nbsp;года №&nbsp;468</a>
+                «О порядке проведения <em>строительного контроля</em> при осуществлении строительства, реконструкции и
+                капитального ремонта объектов капитального строительства».
+            </p>
+
+            <p>
+                Также Положение утанавливает порядок определения размера затрат на проведение <b>строительного
+                контроля</b> и численности работников, осуществляющих строительный контроль, по объектам, финансируемым
+                полностью или частично с привлечением средств федерального бюджета.
+            </p>
+
+            <h4>Строительный контроль включает проведение следующих контрольных мероприятий:</h4>
+
+
+            <ol class="icon-ul push">
+                <li>
+                    <span class="icon icon-li icon-check-square-o text-success"
+                          aria-hidden="true"
+                    ></span>
+                    проверка <em>качества строительных материалов</em>, изделий, конструкций и оборудования,
+                    поставленных для строительства объекта капитального строительства (далее &mdash; входной контроль);
+                </li>
+                <li>
+                    <span class="icon icon-li icon-check-square-o text-success"
+                          aria-hidden="true"
+                    ></span>
+                    проверка соблюдения установленных <em>норм и правил</em> складирования и хранения применяемой
+                    продукции;
+                </li>
+                <li>
+                    <span class="icon icon-li icon-check-square-o text-success"
+                          aria-hidden="true"
+                    ></span>
+                    проверка соблюдения последовательности и состава технологических операций при осуществлении
+                    строительства объекта капитального строительства;
+                </li>
+                <li>
+                    <span class="icon icon-li icon-check-square-o text-success"
+                          aria-hidden="true"
+                    ></span>
+                    совместно с заказчиком освидетельствование работ, скрываемых последующими работами (<em>скрытые
+                    работы</em>), и промежуточная приемка возведенных строительных конструкций, влияющих на безопасность
+                    объекта капитального строительства, участков сетей инженерно-технического обеспечения;
+                </li>
+                <li>
+                    <span class="icon icon-li icon-check-square-o text-success"
+                          aria-hidden="true"
+                    ></span>
+                    приемка законченных видов (этапов) работ;
+                </li>
+                <li>
+                    <span class="icon icon-li icon-check-square-o text-success"
+                          aria-hidden="true"
+                    ></span>
+                    проверка совместно с заказчиком соответствия законченного строительством объекта требованиям
+                    проектной и подготовленной на ее основе рабочей документации, результатам инженерных изысканий,
+                    требованиям градостроительного плана земельного участка, технических регламентов.
+                </li>
+            </ol>
+
+            <meta itemprop="datePublished"
+                  content="2016-03-01">
+        </div>
+    </section>
+
+
+    <section id="warranties"
+             class="screen divided"
+    >
+        <div class="container">
+            <h2>Гарантии</h2>
+            <button class="callback btn btn-lg btn-secondary"
+                    type="button"
+                    data-lightbox
+                    data-lightbox-href="#callback"
+            >Заказать обратный звонок</button>
+        </div>
+    </section>
+
+
+    <section id="objects"
+             class="screen divided"
+    >
+        <div class="container">
+            <h2>Наш опыт</h2>
+            <button class="callback btn btn-lg btn-secondary"
+                    type="button"
+                    data-lightbox
+                    data-lightbox-href="#callback"
+            >Заказать обратный звонок</button>
+        </div>
+    </section>
+
+
+    <section id="about"
+             class="screen divided"
+    >
+        <div class="container">
+            <h2>О нас</h2>
+            <button class="callback btn btn-lg btn-secondary"
+                    type="button"
+                    data-lightbox
+                    data-lightbox-href="#callback"
+            >Заказать обратный звонок</button>
+        </div>
+    </section>
+
+
+    <section id="contact"
+             class="screen"
+    >
+        <div class="container">
+            <h2>Контакты</h2>
+            {% include 'app/content/home/contact.html' %}
+        </div>
+    </section>
+
+
+    <div id="callback"
+         class="modal"
+    >
+        {% include 'form/callback.html' %}
+    </div>
+{% endblock %}

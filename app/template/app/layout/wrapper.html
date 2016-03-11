@@ -1,0 +1,84 @@
+<!doctype html>
+
+
+<html lang="ru"
+      itemscope
+      itemtype="http://schema.org/WebPage"
+>
+
+
+<head>
+    <meta charset="utf-8">
+
+    {% block meta %}
+        {% if robots %}
+            <meta name="robots"
+                  content="{{ robots }}">
+        {% else %}
+            <meta name="robots"
+                  content="index,follow">
+        {% endif %}
+
+        <title>{{ title }}</title>
+
+        {% if description %}
+            <meta name="description"
+                  content="{{ description }}">
+        {% endif %}
+
+        {% if keywords %}
+            <meta name="keywords"
+                  content="{{ keywords|lower }}">
+        {% endif %}
+    {% endblock meta %}
+
+    {% block link %}{% endblock link %}
+
+    {% include 'app/include/head.html' %}
+
+    <script type="text/javascript">
+        (function (window, document) {
+            var touch = window.ontouchstart || (window.DocumentTouch && document instanceof DocumentTouch);
+            document.documentElement.className = 'js ' + (touch ? 'touchevents' : 'no-touchevents');
+        })(window, document)
+    </script>
+
+    <!--[if lt IE 9]>
+        <script src="{{ static }}/js/lib/es5-shim{% if not debug %}.min{% endif %}.js"></script>
+        <script src="{{ static }}/js/lib/html5shiv{% if not debug %}.min{% endif %}.js"></script>
+        <script src="{{ static }}/js/lib/html5shiv-printshiv{% if not debug %}.min{% endif %}.js"></script>
+        <script src="{{ static }}/js/lib/respond{% if not debug %}.min{% endif %}.js"></script>
+    <![endif]-->
+</head>
+
+
+<body>
+{% block header %}
+    {% include 'app/include/header.html' %}
+{% endblock header %}
+
+{% block top %}{% endblock top %}
+
+{% block main %}{% endblock main %}
+
+{% block bottom %}{% endblock bottom %}
+
+<!--noindex-->
+{% block footer %}
+    {% include 'app/include/footer.html' %}
+{% endblock footer %}
+
+{% block navbar %}
+    {% include 'app/include/navbar.html' %}
+{% endblock navbar %}
+
+{% block messages %}
+    {% include 'app/include/messages.html' %}
+{% endblock messages %}
+
+{% block foot %}{% endblock foot %}
+<!--/noindex-->
+</body>
+
+
+</html>

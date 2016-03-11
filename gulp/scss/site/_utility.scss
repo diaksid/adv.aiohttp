@@ -1,0 +1,64 @@
+.bg-cover {
+  background: center no-repeat transparent;
+  background-size: cover;
+}
+
+// ---------------
+
+.clear {
+  clear: both;
+}
+
+.clear-left {
+  clear: left;
+}
+
+.clear-right {
+  clear: right;
+}
+
+// ---------------
+
+.block {
+  display: block;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.overflow {
+  overflow: hidden;
+}
+
+.overflow-x {
+  overflow-x: hidden;
+}
+
+.overflow-y {
+  overflow-y: hidden;
+}
+
+// -------------------------
+
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: block !important;
+}
+
+// ---------------
+
+.ir {
+  display: inline-block;
+  overflow: hidden;
+  text-align: left;
+  text-indent: -9999em;
+  direction: ltr;
+  background-repeat: no-repeat;
+  br {
+    display: none;
+  }
+}

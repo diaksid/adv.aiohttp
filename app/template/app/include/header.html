@@ -1,0 +1,58 @@
+<header id="header">
+    <div role="banner"
+         class="container"
+    >
+        <div class="row"
+             itemscope
+             itemtype="http://schema.org/Organization"
+        >
+            <figure class="col-xs-4 col-md-3 col-xl-2">
+                <a href="{{ url('home') }}"
+                   itemprop="url"
+                >
+                    <img class="img-responsive"
+                         src="{{ static }}/img/logo.png"
+                         width="148"
+                         height="64"
+                         alt="{{ 'Группа компаний «ССК»'.lower() }}"
+                         itemprop="logo"
+                    >
+                </a>
+            </figure>
+
+            <div class="col-md-5 hidden-sm-down">
+                <div class="caption">современные <span>&#8226;</span> стандарты <span>&#8226;</span> качества</div>
+                <a rel="nofollow"
+                   class="address block"
+                   href="//goo.gl/MV9T1V"
+                   target="_blank"
+                   itemprop="address"
+                >
+                    <span class="icon icon-map-marker"
+                          aria-hidden="true"
+                    ></span>
+                    127006, Москва, ул.&nbsp;Малая Дмитровка, д.&nbsp;18а, стр.&nbsp;3
+                </a>
+            </div>
+
+            <div class="col-xs-8 col-md-4 col-xl-5 text-xs-right">
+                <a class="phone block"
+                   href="tel://+74953634582"
+                   itemprop="telephone"
+                >+7 (495) 363-45-82</a>
+                <button class="btn btn-secondary"
+                        type="button"
+                        data-lightbox
+                        data-lightbox-href="#callback"
+                >Заказать обратный звонок</button>
+            </div>
+
+            <meta itemprop="name"
+                  content="Группа компаний «ССК»">
+        </div>
+
+        <h1 id="name"
+            itemprop="name"
+        >{{ name|default(title) }}</h1>
+    </div>
+</header>

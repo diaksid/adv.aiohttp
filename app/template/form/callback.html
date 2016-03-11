@@ -1,0 +1,30 @@
+{% from 'form/field.html' import render_field %}
+
+
+<form id="form-callback"
+      class="form"
+      method="post"
+      action="{{ url('callback') }}"
+>
+    <h3 class="title">Обратный звонок</h3>
+
+    {{ callback.csrf_token }}
+
+    {{ render_field(callback.name,
+            title = 'не менее 3 символов',
+            pattern = '.{3,}',
+            required = True) }}
+
+    {{ render_field(callback.phone,
+            title = 'не менее 7 цифр',
+            pattern = '[0-9\+\-\(\)\s]{7,}',
+            required = True) }}
+
+    <button class="btn btn-lg btn-secondary"
+            type="submit"
+    >
+        <span class="icon icon-send"
+              aria-hidden="true"
+        ></span>
+    </button>
+</form>

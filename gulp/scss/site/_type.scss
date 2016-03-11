@@ -1,0 +1,67 @@
+h1 {
+  margin: ($spacer-y * 2) 0;
+  color: $color-active;
+  line-height: 1.2;
+  text-transform: uppercase;
+
+  @include media-breakpoint-down(lg) {
+    font-size: 1.875rem;
+  }
+
+  @include media-breakpoint-down(md) {
+    font-size: 1.5rem;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin: $spacer-y 0;
+    font-size: 1.25rem;
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: 1rem;
+  }
+}
+
+h2 {
+  margin: $spacer-y 0 ($spacer-y * 2);
+  text-transform: uppercase;
+
+  @include media-breakpoint-down(lg) {
+    font-size: 1.5rem;
+  }
+
+  @include media-breakpoint-down(md) {
+    font-size: 1.25rem;
+  }
+
+  @include media-breakpoint-down(sm) {
+    font-size: 1.125rem;
+  }
+}
+
+h3 {
+  margin: $spacer-y 0;
+
+  @include media-breakpoint-down(lg) {
+    font-size: 1.25rem;
+  }
+
+  @include media-breakpoint-down(md) {
+    font-size: 1rem;
+  }
+
+  @include media-breakpoint-down(sm) {
+    font-size: .875rem;
+  }
+}
+
+a,
+input,
+button,
+.btn,
+.onclick {
+  &:hover,
+  &:focus {
+    outline: 0;
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,22 @@
+@import "../site/variables";
+@import "../site/mixins";
+
+@import "variables";
+@import "mixins";
+
+// -------------------------
+
+$img-fancybox-path: $img-path + "/fancybox";
+
+@import "/var/web/vendor/jquery/fancybox/scss/fancybox";
+
+// -------------------------
+
+.fancybox-overlay {
+    background: url('#{$img-path}/overlay/pattern.vertical.png');
+}
+
+.lightbox,
+[data-lightbox] {
+    cursor: pointer
+}

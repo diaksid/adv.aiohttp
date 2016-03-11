@@ -1,0 +1,90 @@
+@import "../site/variables";
+@import "../site/mixins";
+
+@import "variables";
+@import "mixins";
+
+// -------------------------
+
+[data-carousel] {
+    padding: 2rem .25rem 0 .5rem;
+
+    .outer {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .inner {
+        width: 9999em;
+        position: relative;
+    }
+
+    .item {
+        float: left;
+        margin-right: .25rem;
+        padding: .25rem;
+        transition: all .4s;
+    }
+
+    .control {
+        position: relative;
+        height: 3rem;
+    }
+
+    .icon {
+        padding: .5rem;
+        color: #ddd;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all .2s;
+        &:hover {
+            color: $gray-light;
+        }
+    }
+
+    .prev,
+    .next,
+    .pagination {
+        position: absolute;
+        top: .5rem;
+    }
+
+    .prev {
+        right: 5rem;
+        &::before {
+            content: "\f04a";
+        }
+    }
+
+    .next {
+        right: 0;
+        &::before {
+            content: "\f04e";
+        }
+    }
+
+    .pagination {
+        margin: 0;
+        padding: 0;
+        left: 0;
+        .icon {
+            margin-right: .25rem;
+            font-size: .875rem;
+            &::before {
+                content: "\f10c";
+            }
+            &:hover {
+                &::before {
+                    content: "\f111";
+                }
+           }
+            &.active {
+                color: #bbb;
+                cursor: default;
+                &::before {
+                    content: "\f192";
+                }
+           }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+{% extends 'app/layout/wrapper.html' %}
+
+
+{% block link %}
+    <link rel="stylesheet"
+          href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+    <link rel="stylesheet"
+          href="{{ static }}/css/app{% if not debug %}.min{% endif %}.css">
+{% endblock link %}
+
+
+{% block main %}
+    <main id="content"
+          class="clearfix"
+          itemprop="mainContentOfPage"
+    >{% block content %}{% endblock content %}</main>
+{% endblock main %}
+
+
+{% block foot %}
+    <script src="{{ static }}/js/lib/jquery{% if not debug %}.min{% endif %}.js"></script>
+    <script src="{{ static }}/js/vendor{% if not debug %}.min{% endif %}.js"></script>
+    <script src="{{ static }}/js/app{% if not debug %}.min{% endif %}.js"></script>
+
+    {% include 'app/include/yandex.metrika.html' %}
+{% endblock foot %}

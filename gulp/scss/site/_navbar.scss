@@ -1,0 +1,10 @@
+#navbar {
+  position: fixed;
+  background: transparentize(#fafafa, .1);
+
+  .nav-link {
+    margin-top: .0625rem;
+    font-size: .875rem;
+    text-transform: uppercase;
+  }
+}

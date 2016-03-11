@@ -1,0 +1,13 @@
+<div style="line-height:1.75">
+    {% if phone %}
+        <div>телефон: <b><a target="_blank"
+                            href="tel://{{ phone }}">{{ phone }}</a></b></div>
+        <hr style="margin:8px 0 16px;width:50%;color:#ccc">
+    {% endif %}
+
+    <pre style="font:normal 1em arial, sans-serif">{{ message }}</pre>
+
+    <hr style="margin:16px 0 4px;width:50%;color:#ccc">
+
+    <div style="color:#aaa;font-size:70%;font-style:italic">Некрасовка Парк [ некрасовка-парк.москва ]</div>
+</div>

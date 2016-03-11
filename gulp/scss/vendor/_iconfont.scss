@@ -1,0 +1,53 @@
+$icon-font-path:  "../fonts/iconfont";
+
+@import "/var/web/vendor/iconfont/scss/font";
+
+// -------------------------
+
+.icon-close:before {
+  content: "\E001";
+}
+
+.icon-minus-circle:before {
+  content: "\E002";
+}
+
+.icon-plus-circle:before {
+  content: "\E003";
+}
+
+.icon-user:before {
+  content: "\E004";
+}
+
+.icon-envelope:before {
+  content: "\E005";
+}
+
+.icon-phone:before {
+  content: "\E006";
+}
+
+.icon-tag:before {
+  content: "\E007";
+}
+
+.icon-send:before {
+  content: "\E008";
+}
+
+.icon-copyright:before {
+  content: "\E009";
+}
+
+.icon-html5:before {
+  content: "\E00A";
+}
+
+.icon-line-chart:before {
+  content: "\E00B";
+}
+
+.icon-map-marker:before {
+  content: "\E00C";
+}

@@ -1,0 +1,73 @@
+.form {
+  .title {
+    margin: 0 0 2rem;
+    color: $color-cyan;
+  }
+  .form-control {
+    &:hover {
+      box-shadow: 1px 1px 8px transparentize($gray-light, .5);
+    }
+    &:focus {
+      box-shadow: 1px 1px 8px transparentize($link-color, .5);
+    }
+  }
+  .btn {
+    margin: 1rem 0 0;
+  }
+}
+
+.callback {
+  margin-top: 2rem;
+  color: $color-accent;
+  text-transform: uppercase;
+}
+
+#form-callback {
+  min-width: 320px;
+  max-width: 480px;
+}
+
+#contact {
+  .info {
+    text-align: center;
+    a {
+      display: block;
+      margin-bottom: $spacer-y;
+    }
+    .email {
+      font-weight: bold;
+    }
+    .phone {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+#ymap {
+  margin: ($spacer-y * 2) 0 ($spacer-y * 3);
+  height: 400px;
+  &::after {
+    content: "";
+    display: block;
+    height: 100%;
+    background: $link-hover-color;
+    transition: opacity .4s;
+    opacity: 0;
+  }
+  &:hover:after {
+    opacity: .2;
+  }
+}
+
+#messages {
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  .alert {
+    margin: .5rem 0;
+    box-shadow: 0 1px 12px rgba(128, 128, 128, .8);
+  }
+}

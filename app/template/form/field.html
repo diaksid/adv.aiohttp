@@ -1,0 +1,16 @@
+{% macro render_field(field) %}
+    <fieldset class="form-group">
+        {{ field.label(class="sr-only") }}
+
+        {% set class = 'form-control ' + kwargs.pop('class', '') %}
+        {{ field(class=class, placeholder=field.label.text, **kwargs) }}
+
+        {% if field.errors %}
+            <ul class="errors">
+                {% for error in field.errors %}
+                    <li>{{ error|e }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </fieldset>
+{% endmacro %}

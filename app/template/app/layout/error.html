@@ -1,0 +1,45 @@
+<!doctype html>
+
+
+<html lang="ru">
+
+
+<head>
+<meta charset="utf-8">
+
+<title>{{ error }}</title>
+
+<meta name="robots"
+      content="noindex,nofollow,noarchive">
+
+<meta name="HandheldFriendly"
+      content="true">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable"
+      content="yes">
+<meta name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent">
+
+<link rel="stylesheet"
+      href="{{ static }}/css/error{% if not debug %}.min{% endif %}.css">
+</head>
+
+
+<body>
+<div id="wrapper">
+    <div class="content">
+        <h1>{{ name }}</h1>
+        <h2>Error{{ code }}</h2>
+        <p>( {{ error }} )</p>
+    </div>
+
+    <script type="text/javascript">if (history.length > 1) {
+        document.write('<a href=javascript:history.back()><<</a>');
+    }</script>
+
+    <a href="{{ url('home') }}">на главную</a>
+</div>
+</body>
+
+</html>

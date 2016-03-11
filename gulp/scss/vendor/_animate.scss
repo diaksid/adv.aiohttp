@@ -1,0 +1,18 @@
+@import "animate/base";
+
+@import "animate/attention_seekers/pulse";
+
+//@import "animate/bouncing_entrances/bounceIn";
+
+@import "animate/fading_entrances/fadeIn";
+
+//@import "animate/fading_exits/fadeOut";
+@import "animate/fading_exits/fadeOutDown";
+
+@import "animate/zooming_entrances/zoomIn";
+
+// -------------------------
+
+.wow {
+    visibility: hidden;
+}
