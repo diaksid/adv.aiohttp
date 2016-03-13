@@ -1,4 +1,4 @@
-debug = True
+debug = False
 test = False
 
 server = ('127.0.0.1', 7220,)
