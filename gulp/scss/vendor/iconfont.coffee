@@ -1,6 +1,6 @@
 path = require 'path'
 
-src = '/var/web/vendor/iconfont/font-awesome'
+src = '/var/web/vendor/.proj/fonts/icons/font-awesome'
 
 icons = [
   "#{ src }/close.svg"

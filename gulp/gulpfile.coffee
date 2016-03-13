@@ -28,12 +28,12 @@ gulp.task 'styles:defer', ->
 
 gulp.task 'scripts:site', ->
   js.coffee dest, [
-    "#{ lib }/ppd/jpro/proj.coffee"
-    "#{ lib }/ppd/jpro/_animation.coffee"
-    "#{ lib }/ppd/jpro/_extend.coffee"
-    "#{ lib }/ppd/jpro/_utils.coffee"
-    "#{ lib }/ppd/jpro/vendor/_fancybox.coffee"
-    "#{ lib }/ppd/jpro/vendor/_yandex.coffee"
+    "#{ lib }/.proj/javascript/jquery/proj.coffee"
+    "#{ lib }/.proj/javascript/jquery/_animation.coffee"
+    "#{ lib }/.proj/javascript/jquery/_extend.coffee"
+    "#{ lib }/.proj/javascript/jquery/_utils.coffee"
+    "#{ lib }/.proj/javascript/jquery/vendor/_fancybox.coffee"
+    "#{ lib }/.proj/javascript/jquery/vendor/_yandex.coffee"
     "#{ src }/coffee/core.coffee"
   ],
     concat: 'app'
@@ -144,7 +144,7 @@ gulp.task 'watch', ->
   ]
 
   gulp.watch [
-    "#{ lib }/ppd/jpro/*.coffee"
+    "#{ lib }/.proj/javascript/jquery/*.coffee"
     "#{ src }/coffee/*.coffee"
   ], ['scripts:site']
 
