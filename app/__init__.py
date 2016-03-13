@@ -7,12 +7,13 @@ from aiohttp_session import session_middleware, SimpleCookieStorage
 from aiohttp_session.cookie_storage import EncryptedCookieStorage
 from aiohttp import web
 
-from . import config
-from .middleware import (
+from proj.aiohttp.middleware import (
     error_middleware,
     flash_middleware,
     minify_middleware,
 )
+
+from . import config
 from .view import (
     context_processor,
     home,
@@ -51,6 +52,8 @@ def application(loop=None):
     if config.debug:
         import aiohttp_debugtoolbar
         aiohttp_debugtoolbar.setup(app, intercept_redirects=False)
+
+    app.config = config
 
     engine.setup(app,
                  context_processors=[context_processor,

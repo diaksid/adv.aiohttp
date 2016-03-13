@@ -2,9 +2,10 @@ from aiohttp import web, MsgType
 import aiohttp_jinja2 as engine
 from aiohttp_session import get_session
 
+from proj.aiohttp.form import ContactForm, CallbackForm
+from proj.aiohttp.utility import cache, EmailMultipart
+
 from . import config
-from .form import ContactForm, CallbackForm
-from .utility import cache, EmailMultipart
 
 
 __all__ = ['context_processor',
@@ -28,9 +29,10 @@ async def context_processor(request):
 
 @engine.template('app/content/home.html')
 async def home(request):
+    secret = getattr(config, 'session_key', b'')
     session = await get_session(request)
-    contact = ContactForm(session, prefix='contact')
-    callback = CallbackForm(session, prefix='callback')
+    contact = ContactForm(session, secret, prefix='contact')
+    callback = CallbackForm(session, secret, prefix='callback')
     return dict(
         title='Строительный контроль',
         description='Проведение мероприятий строительного контроля в Москве и области',
@@ -41,10 +43,11 @@ async def home(request):
 
 
 async def contact(request):
+    secret = getattr(config, 'session_key', b'')
     session = await get_session(request)
     messages = session.pop('flash.messages', [])
     post = await request.post()
-    form = ContactForm(session, post, prefix='contact')
+    form = ContactForm(session, secret, post, prefix='contact')
     if form.validate():
         mail = EmailMultipart(request)
         mail.contact(form.data)
@@ -60,10 +63,11 @@ async def contact(request):
 
 
 async def callback(request):
+    secret = getattr(config, 'session_key', b'')
     session = await get_session(request)
     messages = session.pop('flash.messages', [])
     post = await request.post()
-    form = CallbackForm(session, post, prefix='callback')
+    form = CallbackForm(session, secret, post, prefix='callback')
     if form.validate():
         mail = EmailMultipart(request)
         mail.callback(form.data)
@@ -80,8 +84,9 @@ async def callback(request):
 
 @engine.template('app/content/chat.html')
 async def ws(request):
+    secret = getattr(config, 'session_key', b'')
     session = await get_session(request)
-    callback = CallbackForm(session, prefix='callback')
+    callback = CallbackForm(session, secret, prefix='callback')
     return dict(
         title='Строительный контроль Chat',
         description='Строительный контроль Chat',
