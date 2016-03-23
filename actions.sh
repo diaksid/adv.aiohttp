@@ -54,6 +54,7 @@ until [ $ac = "-" ]; do
 
         "*")
             echo  -e "> upgrade";
+            pip install --upgrade pip
             ./upgrade.py;;
 
 
